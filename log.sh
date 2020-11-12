@@ -30,9 +30,12 @@ fi
 let opcion
 while [ "$opcion" != "salir" ]
 do
-echo -e "\e[36m☆﻿\e[36m"
 
-echo -e "\e[34marbol \n -fecha \n -hora \n -jankenpon \n -PrebePlayer \n- ayuda  \n -creditos   \n -salir \n  \e[34m"
+echo -e "************************************************************\n"
+echo -e "****************P R E B E S H E L L*************************\n"
+echo -e "************************************************************\n"
+
+echo -e "\e[34m -arbol \n -fecha \n -hora \n -infosys\n -PrebePlayer \n- ayuda  \n -creditos   \n -salir \n  \e[34m"
 read -p "Por ravor, ingresa una opcion: " opcion
 case $opcion in
         arbol )
@@ -52,8 +55,8 @@ case $opcion in
             read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
             clear
             ;;
-	jankenpon )
-            bash "$PWD/jankenpon.sh"
+	infosys )
+            bash "$PWD/infosys.sh"
             read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
             clear
             ;;
@@ -69,11 +72,6 @@ case $opcion in
             ;;
  	prebeplayer )
             bash "$PWD/prebeplayer2-0.sh"
-            read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
-            clear
-            ;;
-	 tareas )
-            bash "$PWD/tareas.sh"
             read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
             clear
             ;;
