@@ -14,7 +14,7 @@ echo -e "2.- Buscar en otra direccion\n"
 
 
 echo -e "Selecciona una opción: \n" 
-read OPCION 
+read -e OPCION 
 
 
 case $OPCION in 
@@ -27,7 +27,7 @@ case $OPCION in
 	
 	echo -e "Ingresa archivo a buscar: \n"
 
-	read ARCHIVO 
+	read -e ARCHIVO 
 
 	if ls | egrep $ARCHIVO 
 
@@ -47,7 +47,7 @@ case $OPCION in
 	echo -e "OTRO DIRECTORIO\n"
 	
 	echo -e "Ingresa archivo a: \n"
-	read ARCHIVO 
+	read -e ARCHIVO 
 	
 	echo -e "\n Ingresa ruta donde quieras buscar: "
 	read DIRECTORIO 
