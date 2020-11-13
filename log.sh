@@ -35,7 +35,7 @@ echo -e "************************************************************\n"
 echo -e "****************P R E B E S H E L L*************************\n"
 echo -e "************************************************************\n"
 
-echo -e "\e[34m -arbol \n -fecha \n -hora \n -infosys\n -PrebePlayer \n- ayuda  \n -creditos   \n -salir \n  \e[34m"
+echo -e "\e[34m -arbol \n -fecha \n -hora \n -infosys\n -Prebep \n- ayuda  \n -creditos   \n -salir \n  \e[34m"
 read -p "Por ravor, ingresa una opcion: " opcion
 case $opcion in
         arbol )
@@ -70,8 +70,13 @@ case $opcion in
             read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
             clear
             ;;
+<<<<<<< Updated upstream
  	prebeplayer )
             bash "$PWD/prebeplayer2-0.sh"
+=======
+ 	prebep )
+            bash "$PWD/prebep.sh"
+>>>>>>> Stashed changes
             read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
             clear
             ;;
