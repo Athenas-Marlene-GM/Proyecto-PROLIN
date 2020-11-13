@@ -126,10 +126,10 @@ case $OP in
 		comandos
 		case "$NOMBRE_C" in  
      		*\ * )
-           		mpg123 -q "$NOMBRE_C".mp3
+           		mpg123 -q $DIR_MUSICA/"$NOMBRE_C".mp3
           	;;
        	*)
-           		mpg123 -q $NOMBRE_C.mp3
+           		mpg123 -q $DIR_MUSICA/$NOMBRE_C.mp3
            	;;
 		esac		
 		
