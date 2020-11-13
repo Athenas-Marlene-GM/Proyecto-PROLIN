@@ -1,11 +1,12 @@
 #!/bin/bash
+
 AZUL='\033[0;34m'
 VERDE='\033[0;32m'
 ROJO='\033[0;31m'
 ESC='\033[0m'
 trap '' INT TSTP
 printf "${AZUL}Ingresa tu usuario:${ESC} "
-read USUARIO
+read -e USUARIO
 if id "$USUARIO" >/dev/null 2>&1; then
         printf "${AZUL}Ingresa tu contraseña:${ESC} "
 	read -s CONTRASENA
@@ -31,12 +32,14 @@ let opcion
 while [ "$opcion" != "salir" ]
 do
 
-echo -e "************************************************************\n"
-echo -e "****************P R E B E S H E L L*************************\n"
-echo -e "************************************************************\n"
+echo -e "${ROJO}************************************************************${ESC}\n";
+echo -e "${ROJO}****************P R E B E S H E L L*************************${ESC}\n";
+echo -e "${ROJO}************************************************************${ESC}\n"; 
 
-echo -e "\e[34m -arbol \n -fecha \n -hora \n -infosys\n -prebeplayer \n -ahorcado \gato \n- ayuda \n -Buscar  \n -creditos   \n -salir \n  \e[34m"
-read -p "Por ravor, ingresa una opcion: " opcion
+
+echo -e "${VERDE} \n -arbol \n -fecha \n -hora \n -infosys\n -prebeplayer \n -ahorcado \gato \n- ayuda \n -Buscar  \n -creditos   \n -salir \n  ${ESC}"
+read -p  "Por ravor, ingresa una opcion:  " opcion
+
 case $opcion in
         arbol )
             bash "$PWD/arbol.sh"
