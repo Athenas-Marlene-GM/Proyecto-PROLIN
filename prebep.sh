@@ -30,7 +30,7 @@ else
 		AUX=0
 		while [ $AUX == 0 ]
 		do
-			read $DIR_MUSICA
+			read -e $DIR_MUSICA
 			if [ -d DIR_MUSICA ]
 			then
 				AUX=1
