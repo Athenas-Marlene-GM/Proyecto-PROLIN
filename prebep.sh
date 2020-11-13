@@ -93,9 +93,9 @@ case $OP in
 	;;
 	2)
 		clear
-		printf "${VERDE}Ingresa el nuevo directorio (desde la raiz): ${ESC}"
+		echo -e "${VERDE}Ingresa el nuevo directorio (desde la raiz): ${ESC}"
 		DIR_MUSICA2=$DIR_MUSICA
-		read DIR_MUSICA
+		read -e DIR_MUSICA
 		if [ -d $DIR_MUSICA ]
 		then
 			echo -e "${VERDE}El nuevo directorio es $DIR_MUSICA ${ESC}"
