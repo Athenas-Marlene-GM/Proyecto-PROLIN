@@ -296,7 +296,7 @@ do
 				estado
 				imprimir
 				printf "\n\nDame una letra: "
-				read LETRA
+				read -e LETRA
 				comparar
 				comprobacion_fin
 			done
