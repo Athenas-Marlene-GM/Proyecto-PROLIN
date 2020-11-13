@@ -1,15 +1,14 @@
 #!/bin/bash
-
 AZUL='\033[0;34m'
 VERDE='\033[0;32m'
 ROJO='\033[0;31m'
 ESC='\033[0m'
 trap '' INT TSTP
-printf "${AZUL}Ingresa tu usuario:${ESC} "
-read -e USUARIO
+echo -e "${AZUL} "
+read -p "Ingresa tu usuario: " -e USUARIO
 if id "$USUARIO" >/dev/null 2>&1; then
-        printf "${AZUL}Ingresa tu contraseña:${ESC} "
-	read -s CONTRASENA
+        echo -e "Ingresa tu contraseña:${ESC} "
+	read -s -e  CONTRASENA
 	export CONTRASENA
 	CONTRASENA2=`sudo -S grep -w "$USUARIO" /etc/shadow | cut -d: -f2`
 	export ALGO=`echo $CONTRASENA2| cut -d'$' -f2`
@@ -32,14 +31,12 @@ let opcion
 while [ "$opcion" != "salir" ]
 do
 
-echo -e "${ROJO}************************************************************${ESC}\n";
-echo -e "${ROJO}****************P R E B E S H E L L*************************${ESC}\n";
-echo -e "${ROJO}************************************************************${ESC}\n"; 
+echo -e "************************************************************\n"
+echo -e "****************P R E B E S H E L L*************************\n"
+echo -e "************************************************************\n"
 
-
-echo -e "${VERDE} \n -arbol \n -fecha \n -hora \n -infosys\n -prebeplayer \n -ahorcado \gato \n- ayuda \n -Buscar  \n -creditos   \n -salir \n  ${ESC}"
-read -p  "Por ravor, ingresa una opcion:  " opcion
-
+echo -e "\e[32m -arbol \n -fecha \n -hora \n -infosys\n -prebeplayer \n -ahorcado \gato \n- ayuda \n -Buscar  \n -creditos   \n -salir\033[0;32m"
+read -p "$USUARIO@PROLIN-$PWD: &" -e opcion
 case $opcion in
         arbol )
             bash "$PWD/arbol.sh"
@@ -96,6 +93,3 @@ case $opcion in
 	
   esac
 done
-
-
-
