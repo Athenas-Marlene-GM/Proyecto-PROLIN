@@ -39,7 +39,7 @@ echo -e "\e[34m -arbol \n -fecha \n -hora \n -infosys\n -prebeplayer \n -ahorcad
 read -p "Por ravor, ingresa una opcion: " opcion
 case $opcion in
         arbol )
-            bash "$PWD/ar.sh"
+            bash "$PWD/arbol.sh"
 	    read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
 		clear
             ;;
